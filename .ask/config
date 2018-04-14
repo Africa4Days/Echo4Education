@@ -1,14 +1,14 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "amzn1.ask.skill.1778cbc9-6107-42f8-bb6e-16f050aa4437",
+      "skill_id": "",
       "was_cloned": false,
       "merge": {
-        "manifest": {
+        "skillManifest": {
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "ask-custom-api-starter-default"
+                "uri": "echo4education"
               }
             }
           }
@@ -16,7 +16,7 @@
       }
     },
     "Africa4Days": {
-      "skill_id": "amzn1.ask.skill.dbd6098b-9f8f-419e-a6ea-1e1ede562e0e",
+      "skill_id": "amzn1.ask.skill.ae33ad32-9af9-4a70-9073-3d1f1e62afaf",
       "was_cloned": false,
       "merge": {
         "manifest": {
