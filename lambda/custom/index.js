@@ -5,8 +5,8 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 
 // set keys and such for blackboard requests
 let origin = 'https://ec2-35-169-107-184.compute-1.amazonaws.com/'
-let key = '82c0762a-ae8a-4b65-80ce-e2b911cb09fc'
-let secret = '1u5X4KfR6VVtS0iDr4UTDs1bZRKBeUsC'
+let key = '9238388c-95c9-4bb1-9c9f-7c49325ab5a6'
+let secret = 'QDAgX4YShK49hctbd7OVSa1zHdr5vVdA'
 let myApp = new RestApp(origin, key, secret)
 
 // Creating a unique id for each course created
