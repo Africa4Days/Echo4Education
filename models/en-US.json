@@ -1,0 +1,292 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "blackboard help",
+            "intents": [
+                {
+                    "name": "GetClass",
+                    "slots": [],
+                    "samples": [
+                        "get my class",
+                        "get classes",
+                        "get all the classes",
+                        "get courses"
+                    ]
+                },
+                {
+                    "name": "CreateCourse",
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "CLASS_LIST",
+                            "samples": [
+                                "{class}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "create an {class} course",
+                        "create a {class} course",
+                        "create a {class} class",
+                        "create an {class} class",
+                        "create {class}",
+                        "create course"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CreateAnnouncement",
+                    "slots": [
+                        {
+                            "name": "title",
+                            "type": "TITLE_LIST",
+                            "samples": [
+                                "{title}"
+                            ]
+                        },
+                        {
+                            "name": "body",
+                            "type": "BODY_LIST",
+                            "samples": [
+                                "{body}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "make an announcement",
+                        "make announcement",
+                        "create an announcement",
+                        "create announcement"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "CLASS_LIST",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "accounting"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "python"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "javascript"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pre calculus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "government"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "history"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "science"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chemistry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "biology"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "calculus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "math"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "english"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TITLE_LIST",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "hackathon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "science"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "math"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "english"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "grades"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sign up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "classes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "example"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BODY_LIST",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "snow day"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "class is cancelled tonight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "the hackathon starts soon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "this is an example"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "This is an example announcement"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CreateCourse",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "class",
+                            "type": "CLASS_LIST",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.81998033685.1193970111516"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CreateAnnouncement",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "title",
+                            "type": "TITLE_LIST",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.524019769868.88399708932"
+                            }
+                        },
+                        {
+                            "name": "body",
+                            "type": "BODY_LIST",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.524019769868.258501646527"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.81998033685.1193970111516",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What type of class will this be?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.524019769868.88399708932",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like the title of the announcement to be?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.524019769868.258501646527",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What would you like the body of the announcement to be?"
+                    }
+                ]
+            }
+        ]
+    }
+}
