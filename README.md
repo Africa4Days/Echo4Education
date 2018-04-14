@@ -1,5 +1,6 @@
 # Echo4Education
 An Alexa app that helps teachers manage the Blackboard Learn Application.
+hackGVSU 2018
 
 # Built With
 * Javascript
